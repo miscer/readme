@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>README.md</title>
+
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <style type="text/css">
+      html, body {
+        height: 100%;
+      }
+
+      #input, #output {
+        width: 50%;
+        height: 100%;
+
+        box-sizing: border-box;
+        padding: 10px;
+        
+        float: left;
+      }
+
+      #input {
+        border: none;
+        outline: none;
+      }
+
+      #output {
+        max-height: 100%;
+        overflow: auto;
+
+        border-left: 1px solid #ddd;
+        background: #fbfbfb;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <textarea id="input"></textarea>
+    <div id="output"></div>
+    
+    <script type="text/javascript" src="marked.js"></script>
+    <script>
+      var input = document.getElementById('input'),
+          output = document.getElementById('output');
+
+      input.onkeyup = function() {
+        var md = input.value,
+            html = marked(md);
+
+        output.innerHTML = html;
+      };
+    </script>
+
+  </body>
+</html>
