@@ -8,4 +8,4 @@ Run by opening `index.html`.
 Screenshot
 ----------
 
-![README.md editor](https://raw.github.com/michalmiskernik/readme/master/screenshot.png)
+![README.md editor](screenshot.png)
